@@ -13,12 +13,9 @@ import org.hibernate.annotations.common.util.impl.Log;
 
 @Entity
 @Table(name = "passenger")
-public class Passenger {
+public class Passenger extends iModel{
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer ID;
-	
+
 	@Column(name = "passengerName")
 	private String passengerName;
 	
@@ -37,7 +34,8 @@ public class Passenger {
 	public Passenger(){}
 	
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getID() {
 		return ID;
 	}
@@ -107,34 +105,6 @@ public class Passenger {
 	public void setAge(int age) {
 		this.age = age;
 	}
-
-
-
-	/**
-	 * Method for the model to persist itself
-	 * @param session
-	 * @return
-	 */
-	private int persistPassenger(Session session)
-	{
-		
-		try
-		{
-			session.beginTransaction();
-			ID = (Integer)session.save(this);
-			session.getTransaction().commit();			
-		}
-		catch(Exception ex)
-		{
-			ex.printStackTrace();
-		}
-		finally
-		{
-			session.close();
-		}
-		
-		return 0;
-	}
 	
 	/**
 	 * Access method for DB persist method
@@ -144,71 +114,18 @@ public class Passenger {
 	public int savePassengerToDB(Session session)
 	{
 				
-		return this.persistPassenger(session);
+		return persistToDB(session);
 	}
 	
 	public boolean removePassengerFromDB(Session session)
 	{
-		return this.deletePassenger(session);
+		return this.deleteFromDB(session);
 	}
 	
 	public boolean updatePassengerInDB(Session session)
 	{
-		return this.updatePassenger(session);
+		return this.updatePassengerInDB(session);
 	}
-	
-	@Override
-	public String toString()
-	{
-		return passengerName + "--" + location + "--" + destination + "--" + gender + "--" + age;
-	}
-	
-	/**
-	 * private DB delete method returning boolean based on returned results
-	 * @param session
-	 * @return
-	 */
-	private boolean deletePassenger(Session session)
-	{
-		
-		try
-		{
-			session.beginTransaction();
-			session.delete(this);
-			session.getTransaction().commit();		
-			session.close();
-			return true;
-		}
-		catch(Exception ex)
-		{
-			ex.printStackTrace();
-		}
-		return false;
 
-	}
-	
-	/**
-	 * private DB update method returning boolean based on returned results
-	 * @param session
-	 * @return
-	 */
-	private boolean updatePassenger(Session session)
-	{
-		
-		try
-		{
-			session.beginTransaction();
-			session.update(this);
-			session.getTransaction().commit();		
-			session.close();
-			return true;
-		}
-		catch(Exception ex)
-		{
-			ex.printStackTrace();
-		}
-		return false;
-
-	}
 	
 }

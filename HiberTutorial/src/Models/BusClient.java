@@ -8,11 +8,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "bus_client")
-public class BusClient {
+public class BusClient extends iModel{
 
-	@Id
-	@GeneratedValue
-	private int ID;
 	
 	@Column(name = "clientName")
 	private String clientName;

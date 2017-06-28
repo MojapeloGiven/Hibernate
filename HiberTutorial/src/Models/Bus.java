@@ -6,13 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.Session;
+
 @Entity
 @Table(name = "bus")
 public class Bus {
 
-	@Id
-	@GeneratedValue
-	private int ID;
 	
 	@Column(name = "busRegistration")
 	private String busRegistration;
@@ -22,5 +21,8 @@ public class Bus {
 	
 	@Column(name = "seatCount")
 	private int seatCount;
+	
+	
+	
 	
 }

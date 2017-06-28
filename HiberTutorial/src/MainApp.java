@@ -64,7 +64,6 @@ public class MainApp {
 		passenger.setDestination(destination);
 		passenger.setGender(genderID);
 		passenger.setLocation(location);
-	    System.out.println(passenger.toString());
 		return passenger;
 	}
 
