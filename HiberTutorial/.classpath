@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/hibernate-core-5.0.11.Final.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/lucene-core-5.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/required/xml-apis-1.3.03.jar"/>
+	<classpathentry kind="lib" path="C:/hibernate/dist/lib/hibernate-annotations/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reverside/Downloads/jta.jar/jta.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reverside/Downloads/jar_files/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reverside/Downloads/log4j-1.2.16.jar/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reverside/Downloads/slf4j-simple-1.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reverside/Downloads/com.mysql.jdbc_5.1.5.jar/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reverside/Downloads/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
